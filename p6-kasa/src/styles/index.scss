@@ -1,12 +1,14 @@
-body {
-  margin: 45px 45px 0px 45px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Montserrat',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+$gray: #F6F6F6;
+$red: #FF6060;
+$white: #FFFFFF;
+$black: #0000;
+
+* {
+  margin: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Montserrat',
-    monospace;
+body {
+  margin: 45px 45px 0px 45px;
+  font-family: Montserrat,
+    sans-serif;
 }
