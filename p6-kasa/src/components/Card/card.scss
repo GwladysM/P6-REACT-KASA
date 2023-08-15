@@ -1,0 +1,16 @@
+.gallery__card {
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    background-image: var(--location-cover);
+}
+
+.gallery__card h3 {
+    color: #FFFFFF;
+    font-size: 18px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 60%;
+}
