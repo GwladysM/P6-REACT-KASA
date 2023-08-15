@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+}
+
+.collapse {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.collapse__title {
+    background-color: #FF6060;
+    border-radius: 5px;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collapse__title h2 {
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+.collapse__title button {
+    border: none;
+    background-color: #FF6060;
+}
+
+.collapse__title img {
+    width: 24px;
+}
+
+.collapse__text {
+    background-color: #F6F6F6;
+    border-radius: 5px;
+    color: #FF6060;
+    font-size: 18px;
+    padding: 15px 20px;
+}
