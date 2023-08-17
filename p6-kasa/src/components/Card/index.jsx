@@ -1,10 +1,9 @@
 import React from "react";
 import './card.scss'
-import { Link } from "react-router-dom";
 
 function Card({ cover, title }) {
     return (
-        <div className="gallery__card" onClick={handleClick} style={{
+        <div className="gallery__card" style={{
             backgroundImage: ``,
             background: `linear-gradient(180deg, rgba(255, 255, 255, 0.03) 50%, 
             rgba(0, 0, 0, 0.9) 100%), url(${cover})`,
@@ -13,10 +12,6 @@ function Card({ cover, title }) {
             <h3>{title}</h3>
         </div>
     )
-}
-
-function handleClick({ cards, setCards }) {
-    <Link to="/Logement"></Link>
 }
 
 export default Card

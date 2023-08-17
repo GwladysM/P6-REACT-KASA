@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './gallery.scss';
 import Card from '../Card';
+import { NavLink } from 'react-router-dom';
 
 function Gallery() {
     const [cards, setCards] = useState([]);
@@ -14,9 +15,11 @@ function Gallery() {
 
     return (
         <div className='gallery'>
-            {cards.map(({ id, title, cover }) => (
-                <Card key={id} title={title} cover={cover} cards={cards} setCards={setCards} />
-            ))}
+            <NavLink to='/logement' className="card__title">
+                {cards.map(({ id, title, cover }) => (
+                    <Card key={id} title={title} cover={cover} />
+                ))}
+            </NavLink>
         </div>
     )
 }

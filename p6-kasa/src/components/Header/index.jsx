@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './header.scss'
 
 function Logo() {
@@ -16,8 +16,8 @@ function Header() {
             </div>
             <div>
                 <nav>
-                    <Link className='navbar__link' to="/">Accueil</Link>
-                    <Link className='navbar__link' to="/apropos">A Propos</Link>
+                    <NavLink className={(nav) => (nav.isActive ? "active" : "non-active")} to="/">Accueil</NavLink>
+                    <NavLink className={(nav) => (nav.isActive ? "active" : "non-active")} to="/apropos">A Propos</NavLink>
                 </nav>
             </div>
         </div>

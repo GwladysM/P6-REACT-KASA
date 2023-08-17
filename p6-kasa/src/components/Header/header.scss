@@ -6,9 +6,15 @@
     padding-bottom: 40px;
 }
 
-.navbar__link {
+.non-active {
     color: #FF6060;
     text-decoration: none;
+    margin-left: 57px;
+}
+
+.active {
+    color: #FF6060;
+    text-decoration: underline;
     margin-left: 57px;
 }
 

@@ -1,8 +1,6 @@
 .collapse {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    padding-bottom: 30px;
 }
 
 .collapse__title {
@@ -20,9 +18,14 @@
     font-size: 24px;
 }
 
-.collapse__title button {
+.btn {
     border: none;
     background-color: #FF6060;
+
+    & :hover {
+        transform: rotate(180deg);
+        transition: transform 500ms ease-in-out;
+    }
 }
 
 .collapse__title img {

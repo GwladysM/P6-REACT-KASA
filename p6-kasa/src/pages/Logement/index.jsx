@@ -1,37 +1,37 @@
 import './logement.scss'
+import Collapse from '../../components/Collapse'
+import Rating from '../../components/Rating'
+import Tags from '../../components/Tags'
+import Host from '../../components/Host'
+import TitleLocation from '../../components/Title-Location'
+import Carrousel from '../../components/Carrousel'
 
 function Logement() {
     return (
         <div className="logement">
-            <img src="./assets/Image-source-1.png" alt="" />
+            <Carrousel />
             <div className='title__host'>
-                <div className="logement__title">
-                    <h2>Cozy loft on the Canal Saint-Martin</h2>
-                    <h3>Location</h3>
-                </div>
-                <div className="logement__host">
-                    <p>First name Last name</p>
-                    <img src="./assets/Image-source-1.png" alt="" />
-                </div>
+                <TitleLocation />
+                <Host />
             </div>
             <div className="logement__divers">
-                <p className='logement__divers--tags'>Tags</p>
-                <p>rating</p>
+                <Tags />
+                <Rating />
             </div>
             <div className="logement__informations">
                 <div className="logement__description">
-                    <div className='logement__informations--title'>
-                        <h2>Description</h2>
-                        <button><img src="./assets/Vector.png" alt="Afficher les détails" /></button>
-                    </div>
-                    <p className='logement__text'>ecrire la description</p>
+                    <Collapse label="Description">
+                        <p>
+                            ecrire la description
+                        </p>
+                    </Collapse>
                 </div>
                 <div className="logement__equipements">
-                    <div className='logement__informations--title'>
-                        <h2>Equipements</h2>
-                        <button><img src="./assets/Vector.png" alt="Afficher les détails" /></button>
-                    </div>
-                    <p className='logement__text'>Lister les équipements</p>
+                    <Collapse label="Equipements">
+                        <p>
+                            ecrire les équipements
+                        </p>
+                    </Collapse>
                 </div>
             </div>
         </div>
