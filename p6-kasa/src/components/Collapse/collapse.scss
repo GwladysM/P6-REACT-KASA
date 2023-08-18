@@ -22,7 +22,7 @@
     border: none;
     background-color: #FF6060;
 
-    & :hover {
+    & :active {
         transform: rotate(180deg);
         transition: transform 500ms ease-in-out;
     }

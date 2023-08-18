@@ -6,7 +6,9 @@ import Host from '../../components/Host'
 import TitleLocation from '../../components/Title-Location'
 import Carrousel from '../../components/Carrousel'
 
+
 function Logement() {
+
     return (
         <div className="logement">
             <Carrousel />

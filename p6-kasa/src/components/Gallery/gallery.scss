@@ -1,14 +1,13 @@
 .gallery {
     background-color: #F6F6F6;
     border-radius: 25px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
     justify-items: center;
     padding: 40px;
     margin-bottom: 40px;
 }
 
 .card__title {
-    text-decoration: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
 }
