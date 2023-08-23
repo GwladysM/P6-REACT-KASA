@@ -28,6 +28,18 @@
     }
 }
 
+/* Ajout d'une classe .btn-active pur faire tourner le bouton au clic */
+.btn-active {
+    border: none;
+    background-color: #FF6060;
+    transform: rotate(180deg);
+
+    & :active {
+        transform: rotate(180deg);
+        transition: transform 500ms ease-in-out;
+    }
+}
+
 .collapse__title img {
     width: 24px;
 }

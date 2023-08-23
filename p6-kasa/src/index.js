@@ -8,19 +8,22 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Error from './components/Error';
 import Logement from './pages/Logement';
+import FetchProvider from './utils/context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <Router>
-            <Header />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/apropos" element={<APropos />} />
-                <Route path='*' element={<Error />} />
-                <Route path='/logement/:id' element={<Logement />} />
-            </Routes>
-            <Footer />
+            <FetchProvider>
+                <Header />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/apropos" element={<APropos />} />
+                    <Route path='*' element={<Error />} />
+                    <Route path='/logement/:id' element={<Logement />} />
+                </Routes>
+                <Footer />
+            </FetchProvider>
         </Router>
     </React.StrictMode>
 );

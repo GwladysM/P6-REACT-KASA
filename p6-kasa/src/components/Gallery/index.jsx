@@ -1,31 +1,19 @@
-import React, { useEffect, useState } from 'react';
 import './gallery.scss';
 import Card from '../Card';
+import { useContext } from "react"
+import { FetchContext } from "../../utils/context"
 
 function Gallery() {
-    const [cards, setCards] = useState([]);
-
-    useEffect(() => {
-        fetch("/logements.json")
-            .then(res => (res.json()))
-            .then(res => setCards(res))
-            .catch((error) => console.log(error))
-    }, []);
+    const { setCards, cards } = useContext(FetchContext)
 
     return (
         <div className='gallery'>
             <div className="card__title">
-                {cards.map(({ id, title, cover, pictures, description, host, rating, location, equipments, tags }) => (
+                {cards.map(({ id, title, cover }) => (
                     <Card key={id}
                         id={id}
                         title={title}
-                        cover={cover}
-                        pictures={pictures}
-                        description={description}
-                        host={host} rating={rating}
-                        location={location}
-                        equipments={equipments}
-                        tags={tags} />
+                        cover={cover} />
                 ))}
             </div>
         </div>
