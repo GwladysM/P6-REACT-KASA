@@ -1,5 +1,4 @@
-import { FetchContext } from '../../utils/context'
-import { useContext } from 'react'
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import './logement.scss'
 import Collapse from '../../components/Collapse'
@@ -11,8 +10,15 @@ import Carrousel from '../../components/Carrousel'
 
 function Logement() {
     const { id } = useParams()
+    const [cards, setCards] = useState([]);
 
-    const { setCards, cards } = useContext(FetchContext)
+    useEffect(() => {
+        fetch("/logements.json")
+            .then(res => (res.json()))
+            .then(res => setCards(res))
+            .catch((error) => console.log(error))
+
+    }, []);
 
     const logement = cards.find((cards) => cards.id === id)
     console.log(logement)
@@ -23,12 +29,7 @@ function Logement() {
         <div className="logement">
             <Carrousel />
             <div className='title__host'>
-                {cards.map(({ id, title, location }) => (
-                    <TitleLocation
-                        key={id}
-                        title={title}
-                        location={location} />
-                ))}
+                <TitleLocation />
                 <Host />
             </div>
             <div className="logement__divers">
@@ -56,4 +57,3 @@ function Logement() {
 }
 
 export default Logement
-
