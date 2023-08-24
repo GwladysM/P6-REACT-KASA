@@ -42,6 +42,7 @@ $black: #0000;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     width: 180px;
 }
 
@@ -55,16 +56,29 @@ $black: #0000;
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 }
 
-.logement__divers--tags {
+.tagsGpe {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 10px;
+}
+
+.rating {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+.logement__divers--tagsIndiv {
     background-color: $red;
     color: $white;
     font-size: 14px;
-    padding: 5px 10px;
+    padding: 5px 5px;
     border-radius: 10px;
-    width: 115px;
+    width: 150px;
+    height: fit-content;
     text-align: center;
 }
 
@@ -110,4 +124,9 @@ $black: #0000;
 .logement__description,
 .logement__equipements {
     width: inherit;
+}
+
+.logement__equipements__list {
+    list-style-type: none;
+    padding-left: 0;
 }

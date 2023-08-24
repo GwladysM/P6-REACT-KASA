@@ -1,8 +1,8 @@
-function Host() {
+function Host({ hostName, hostPicture }) {
     return (
         <div className="logement__host">
-            <p>First name Last name</p>
-            <img src="./assets/Image-source-1.png" alt="" />
+            <p>{hostName}</p>
+            <img src={hostPicture} alt="The host" />
         </div>
     )
 }

@@ -3,12 +3,12 @@ import Card from '../Card';
 import { useState, useEffect } from 'react';
 
 function Gallery() {
-    const [cards, setCards] = useState([]);
+    const [logementsData, setLogementsData] = useState([]);
 
     useEffect(() => {
         fetch("/logements.json")
             .then(res => (res.json()))
-            .then(res => setCards(res))
+            .then(res => setLogementsData(res))
             .catch((error) => console.log(error))
 
     }, []);
@@ -16,7 +16,7 @@ function Gallery() {
     return (
         <div className='gallery'>
             <div className="card__title">
-                {cards.map(({ id, title, cover }) => (
+                {logementsData.map(({ id, title, cover }) => (
                     <Card key={id}
                         id={id}
                         title={title}

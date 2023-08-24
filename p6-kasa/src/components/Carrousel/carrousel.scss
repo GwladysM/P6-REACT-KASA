@@ -1,0 +1,42 @@
+.sliderStyles {
+    height: 100%;
+    position: relative;
+}
+
+.slideStyles {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-position: center;
+    background-size: cover;
+}
+
+.leftVectorStyles {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 32px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.rightVectorStyles {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 32px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.numberContainerStyles {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    z-index: 1;
+}
+
+.numberStyles {
+    color: white;
+    font-size: 18px;
+}

@@ -1,8 +1,12 @@
-function Tags() {
+function Tags({ tags }) {
     return (
-        <p className="logement__divers--tags">
-            Tags
-        </p>
+        <div className="logement__divers tagsGpe">
+            {tags.map((tag, index) => (
+                <div className="logement__divers--tagsIndiv" key={index}>
+                    {tag}
+                </div>
+            ))}
+        </div>
     )
 }
 

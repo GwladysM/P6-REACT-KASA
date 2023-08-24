@@ -1,12 +1,18 @@
+import React from "react"
+
 function Rating(props) {
-    const rateValue = props.rateValue
-    const rating = [1, 2, 3, 4, 5]
+    const ratingValue = props.ratingValue
+    const ratingScore = [1, 2, 3, 4, 5]
+
     return (
-        <div>
-            <p>rating</p>
+        <div className="rating">
             {
-                rating.map((ratingElem) =>
-                    rateValue >= ratingElem ? <span key={ratingElem.toString()}>Coucou</span> : null
+                ratingScore.map(
+                    (ratingElem) =>
+                        ratingValue >= ratingElem ?
+                            <span key={ratingElem.toString()}>
+                                <img src="./assets/star-active.png" alt="star" />
+                            </span> : null
                 )
             }
         </div>
@@ -14,3 +20,4 @@ function Rating(props) {
 }
 
 export default Rating
+

@@ -20,7 +20,7 @@ function Collapse(props) {
         <div className="collapse">
             <div className="collapse__title">
                 <h2>{props.label}</h2>
-                <button onClick={handleClick} className="btn btn-active" id="chevron"><img src="./assets/Vector.png" alt="Afficher les détails" /></button>
+                <button onClick={handleClick} className="btn btn-active" id="chevron"><img src="./assets/Vector.png" alt="Détails" /></button>
             </div>
             {open &&
                 <div className="collapse__text">
