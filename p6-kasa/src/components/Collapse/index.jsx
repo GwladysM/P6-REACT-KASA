@@ -5,10 +5,10 @@ import "./collapse.scss";
 function Collapse(props) {
     const [open, setOpen] = useState(false);
 
-    function handleClick(button) {
+    function handleClick() {
         setOpen(!open)
         let chevron = document.getElementById("chevron")
-        console.log(chevron)
+
         if (open) {
             chevron.className = "btn-active"
         } else {

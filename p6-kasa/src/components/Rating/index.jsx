@@ -1,23 +1,24 @@
 import React from "react"
+import "./rating.scss"
 
 function Rating(props) {
     const ratingValue = props.ratingValue
-    const ratingScore = [1, 2, 3, 4, 5]
+    const maxValue = 5
+    const ratingArray = Array.from({ length: maxValue })
+
 
     return (
         <div className="rating">
-            {
-                ratingScore.map(
-                    (ratingElem) =>
-                        ratingValue >= ratingElem ?
-                            <span key={ratingElem.toString()}>
-                                <img src="./assets/star-active.png" alt="star" />
-                            </span> : null
-                )
-            }
+            {ratingArray.map((_, index) => (
+                <img
+                    key={index}
+                    src={index < ratingValue ? "public/assets/star-active.png" : "public/assets/star-inactive.png"}
+                    alt={index < ratingValue ? "starActive" : "starInactive"}
+                    className="starImage"
+                />
+            ))}
         </div>
     )
 }
 
 export default Rating
-

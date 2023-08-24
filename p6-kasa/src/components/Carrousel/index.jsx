@@ -20,14 +20,14 @@ function Carrousel({ slides }) {
     return (
         <div className="sliderStyles">
             <div className="leftVectorStyles" onClick={goToPrevious}>
-                <img src="public/assets/Vector-prev.png" alt="Previous" />
+                <img rel="icon" src="public/assets/Vector-prev.png" alt="Previous" />
             </div>
             <div className="rightVectorStyles" onClick={goToNext}>
                 <img src="public/assets/Vector-next.png" alt="Next" />
             </div>
             <div className="numberContainerStyles">
                 <div className="numberStyles">
-                    numerotation
+                    {currentIndex + 1} / {slides.length}
                 </div>
             </div>
             <div className="slideStyles" style={{
