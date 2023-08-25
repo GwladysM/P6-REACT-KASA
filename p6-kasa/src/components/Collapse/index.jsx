@@ -7,20 +7,18 @@ function Collapse(props) {
 
     function handleClick() {
         setOpen(!open)
-        let chevron = document.getElementById("chevron")
-
-        if (open) {
-            chevron.className = "btn-active"
-        } else {
-            chevron.className = "btn"
-        }
     }
 
     return (
         <div className="collapse">
             <div className="collapse__title">
                 <h2>{props.label}</h2>
-                <button onClick={handleClick} className="btn btn-active" id="chevron"><img src="./assets/Vector.png" alt="Détails" /></button>
+                <button
+                    onClick={handleClick}
+                    className={`btn ${open ? "btn-active" : ""}`}
+                    id="chevron">
+                    <img src="/assets/Vector.png" alt="Détails" />
+                </button>
             </div>
             {open &&
                 <div className="collapse__text">

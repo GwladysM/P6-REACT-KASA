@@ -3,7 +3,7 @@ import './footer.scss'
 
 function Logo() {
     return (
-        <img id='footer__logo' src="./assets/LOGOn&b.png" alt="Logo Kasa" />
+        <img id='footer__logo' src="/assets/LOGOn&b.png" alt="Logo Kasa" />
     )
 }
 function Footer() {

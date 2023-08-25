@@ -19,17 +19,21 @@ function Carrousel({ slides }) {
 
     return (
         <div className="sliderStyles">
-            <div className="leftVectorStyles" onClick={goToPrevious}>
-                <img rel="icon" src="public/assets/Vector-prev.png" alt="Previous" />
-            </div>
-            <div className="rightVectorStyles" onClick={goToNext}>
-                <img src="public/assets/Vector-next.png" alt="Next" />
-            </div>
-            <div className="numberContainerStyles">
-                <div className="numberStyles">
-                    {currentIndex + 1} / {slides.length}
-                </div>
-            </div>
+            {slides.length > 1 && (
+                <>
+                    <div className="leftVectorStyles" onClick={goToPrevious}>
+                        <img src='/assets/Vector-prev.png' alt="Previous" />
+                    </div>
+                    <div className="rightVectorStyles" onClick={goToNext}>
+                        <img src="/assets/Vector-next.png" alt="Next" />
+                    </div>
+                    <div className="numberContainerStyles">
+                        <div className="numberStyles">
+                            {currentIndex + 1} / {slides.length}
+                        </div>
+                    </div>
+                </>
+            )}
             <div className="slideStyles" style={{
                 backgroundImage: `url(${slides[currentIndex]})`
             }}>

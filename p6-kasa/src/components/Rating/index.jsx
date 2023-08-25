@@ -12,7 +12,7 @@ function Rating(props) {
             {ratingArray.map((_, index) => (
                 <img
                     key={index}
-                    src={index < ratingValue ? "public/assets/star-active.png" : "public/assets/star-inactive.png"}
+                    src={index < ratingValue ? "/assets/star-active.png" : "/assets/star-inactive.png"}
                     alt={index < ratingValue ? "starActive" : "starInactive"}
                     className="starImage"
                 />

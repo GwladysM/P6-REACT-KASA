@@ -4,7 +4,7 @@ import './header.scss'
 
 function Logo() {
     return (
-        <img src="./assets/LOGO.png" alt="Logo Kasa" />
+        <img src="/assets/LOGO.png" alt="Logo Kasa" />
     )
 }
 

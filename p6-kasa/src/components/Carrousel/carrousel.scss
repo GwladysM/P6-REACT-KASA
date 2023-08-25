@@ -29,6 +29,11 @@
     cursor: pointer;
 }
 
+.leftVectorStyles img,
+.rightVectorStyles img {
+    width: auto;
+}
+
 .numberContainerStyles {
     position: absolute;
     bottom: 10%;
