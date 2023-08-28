@@ -41,7 +41,5 @@ function Carrousel({ slides }) {
         </div>
     )
 }
-//{slides.map((slide, slideIndex) => (
-//    ))}
 
 export default Carrousel

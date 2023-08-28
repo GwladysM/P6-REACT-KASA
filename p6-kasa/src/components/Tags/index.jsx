@@ -1,8 +1,8 @@
 function Tags({ tags }) {
     return (
-        <div className="logement__divers tagsGpe">
+        <div className="tags__groupe">
             {tags.map((tag, index) => (
-                <div className="logement__divers--tagsIndiv" key={index}>
+                <div className="logement--tagsIndiv" key={index}>
                     {tag}
                 </div>
             ))}

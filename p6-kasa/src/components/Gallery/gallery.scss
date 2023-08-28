@@ -8,6 +8,20 @@
 .card__title {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
+    gap: 40px 0px;
     justify-items: center;
+}
+
+@media screen and (max-width: 850px) {
+    .gallery {
+        border-radius: 0;
+        padding: 0;
+        background-color: white;
+    }
+
+    .card__title {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }

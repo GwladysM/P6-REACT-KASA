@@ -9,6 +9,7 @@ import Host from '../../components/Host'
 import TitleLocation from '../../components/Title-Location'
 import Carrousel from '../../components/Carrousel'
 import Error from '../../components/Error'
+import { Loader } from "../../components/Loader";
 
 function Logement() {
     //Récupération de l'ID :
@@ -16,10 +17,11 @@ function Logement() {
 
     //Création des constantes pour state des données et du chargement de la page :
     const [logementsData, setLogementsData] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
 
     //Appel à fetch pour récup des données du fichier json :
     useEffect(() => {
+        setLoading(true)
         fetch(`/logements.json`)
             .then(res => res.json())
             .then(data => {
@@ -36,7 +38,7 @@ function Logement() {
 
     //Msg de chargement si données pas encore prêtes :
     if (loading) {
-        return <div>Loading...</div>
+        return <Loader />
     }
 
     //Msg si le logement n'a pas été trouvé :
@@ -44,24 +46,20 @@ function Logement() {
         return <Error />
     }
 
-    const containerStyles = {
-        width: '1240px',
-        height: '415px',
-        margin: '0 auto',
-    }
-
     return (
         <div className="logement">
-            <div style={containerStyles}>
+            <div className='containerStyles'>
                 <Carrousel slides={logement.pictures} />
             </div>
-            <div className='title__host'>
-                <TitleLocation title={logement?.title} location={logement.location} />
-                <Host hostName={logement.host.name} hostPicture={logement.host.picture} />
-            </div>
-            <div className="logement__divers">
-                <Tags tags={logement.tags} />
-                <Rating ratingValue={logement.rating} />
+            <div className="logement__presentation">
+                <div className='title__tags'>
+                    <TitleLocation title={logement?.title} location={logement.location} />
+                    <Tags tags={logement.tags} />
+                </div>
+                <div className="rating__host">
+                    <Host hostName={logement.host.name} hostPicture={logement.host.picture} />
+                    <Rating ratingValue={logement.rating} />
+                </div>
             </div>
             <div className="logement__informations">
                 <div className="logement__description">
@@ -86,5 +84,3 @@ function Logement() {
 }
 
 export default Logement
-
-//{ title, cover, pictures, description, host, rating, location, equipments, tags }

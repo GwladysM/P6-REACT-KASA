@@ -18,6 +18,21 @@
     margin-left: 57px;
 }
 
-img {
+.navbar__logo img {
     width: 200px;
+}
+
+@media screen and (max-width: 850px) {
+    .navbar__logo img {
+        width: 145px;
+    }
+
+    .navbar__navlink {
+        font-size: 12px;
+    }
+
+    .active,
+    .non-active {
+        margin-left: 20px;
+    }
 }

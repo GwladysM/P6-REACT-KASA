@@ -8,7 +8,7 @@ $black: #0000;
 }
 
 body {
-  margin: 45px 45px 0px 45px;
+  margin: 45px 100px 0px 100px;
   font-family: Montserrat,
     sans-serif;
 }
@@ -17,4 +17,16 @@ h1,
 h2,
 h3 {
   font-weight: 500;
+}
+
+@media screen and (max-width: 850px) {
+  body {
+    margin: 20px 20px 0px 20px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: 400;
+  }
 }

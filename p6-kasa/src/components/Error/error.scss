@@ -1,16 +1,19 @@
 .error {
     color: #FF6060;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0px;
+    gap: 139px;
 }
 
 .error__h1 {
     font-size: 288px;
-    padding: 70px 0px;
 }
 
 .error__h2 {
     font-size: 36px;
-    padding: 70px 0px;
 }
 
 .error__link {
@@ -19,4 +22,26 @@
 
 .error__link:visited {
     color: #FF6060;
+}
+
+@media screen and (max-width: 850px) {
+    .error {
+        gap: 113px;
+        padding: 50px 0px;
+    }
+
+    .error__h1 {
+        font-size: 96px;
+        font-weight: bold;
+    }
+
+    .error__h2 {
+        font-size: 18px;
+        text-align: center;
+        margin: 0px 55px;
+    }
+
+    .error__link {
+        font-size: 14px;
+    }
 }

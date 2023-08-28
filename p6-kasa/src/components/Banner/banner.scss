@@ -14,3 +14,20 @@
     /*background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
         url("./assets/Image-source-1.png");*/
 }
+
+@media screen and (max-width: 850px) {
+    .banner {
+        height: 111px;
+        font-size: 24px;
+        text-align: left;
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding-left: 15px;
+        margin-bottom: 20px;
+        justify-content: flex-start;
+    }
+
+    .banner p {
+        width: 220px;
+    }
+}

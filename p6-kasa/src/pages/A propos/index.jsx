@@ -1,10 +1,11 @@
 import React from "react";
 import AboutBanner from "../../components/AboutBanner";
 import Collapse from "../../components/Collapse";
+import './aboutbanner.scss'
 
 function APropos() {
     return (
-        <div>
+        <div className="about__banner">
             <AboutBanner />
             <Collapse label="Fiabilité">
                 <p>

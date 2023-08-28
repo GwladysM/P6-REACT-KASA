@@ -14,7 +14,7 @@ function Header() {
             <div className='navbar__logo'>
                 <Logo />
             </div>
-            <div>
+            <div className='navbar__navlink'>
                 <nav>
                     <NavLink className={(nav) => (nav.isActive ? "active" : "non-active")} to="/">Accueil</NavLink>
                     <NavLink className={(nav) => (nav.isActive ? "active" : "non-active")} to="/apropos">A Propos</NavLink>
