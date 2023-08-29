@@ -1,5 +1,10 @@
+$primary-color: #FF6060;
+$secondary-color: #F6F6F6;
+$white: #FFFFFF;
+$black: #0000;
+
 .error {
-    color: #FF6060;
+    color: $primary-color;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,41 +12,39 @@
     padding: 70px 0px;
     gap: 139px;
 
+    @media screen and (max-width: 850px) {
+        gap: 113px;
+        padding: 50px 0px;
+    }
+
     &__h1 {
         font-size: 288px;
+
+        @media screen and (max-width: 850px) {
+            font-size: 96px;
+            font-weight: bold;
+        }
     }
 
     &__h2 {
         font-size: 36px;
-    }
 
-    &__link {
-        color: #FF6060;
-    }
-}
-
-.error__link:visited {
-    color: #FF6060;
-}
-
-@media screen and (max-width: 850px) {
-    .error {
-        gap: 113px;
-        padding: 50px 0px;
-
-        &__h1 {
-            font-size: 96px;
-            font-weight: bold;
-        }
-
-        &__h2 {
+        @media screen and (max-width: 850px) {
             font-size: 18px;
             text-align: center;
             margin: 0px 55px;
         }
+    }
 
-        &__link {
+    &__link {
+        color: #FF6060;
+
+        @media screen and (max-width: 850px) {
             font-size: 14px;
         }
     }
+}
+
+.error__link:visited {
+    color: $primary-color;
 }

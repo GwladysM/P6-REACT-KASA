@@ -1,5 +1,5 @@
-$gray: #F6F6F6;
-$red: #FF6060;
+$primary-color: #FF6060;
+$secondary-color: #F6F6F6;
 $white: #FFFFFF;
 $black: #0000;
 
@@ -8,27 +8,44 @@ $black: #0000;
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    color: $red;
+    color: $primary-color;
     padding-bottom: 30px;
 
     &__presentation {
         display: flex;
         flex-direction: row;
         width: 100%;
+
+        @media screen and (max-width: 850px) {
+            flex-direction: column;
+        }
     }
 
     &__title {
         display: flex;
         flex-direction: column;
         gap: 10px;
+
+        @media screen and (max-width: 850px) {
+            gap: 10px;
+        }
     }
 
     &__title h2 {
         font-size: 36px;
+
+        @media screen and (max-width: 850px) {
+            font-size: 18px;
+        }
     }
 
     &__title h3 {
         font-size: 18px;
+
+        @media screen and (max-width: 850px) {
+            font-size: 14px;
+        }
+
     }
 
     &__host {
@@ -37,12 +54,24 @@ $black: #0000;
         align-items: center;
         justify-content: space-between;
         width: 180px;
+
+        @media screen and (max-width: 850px) {
+            text-align: end;
+            font-size: 12px;
+            width: 100px;
+            gap: 10px;
+        }
     }
 
     &__host img {
         width: 64px;
         height: 64px;
         border-radius: 50px;
+
+        @media screen and (max-width: 850px) {
+            width: 32px;
+            height: 32px;
+        }
     }
 
     &__informations {
@@ -50,11 +79,16 @@ $black: #0000;
         flex-direction: row;
         width: 100%;
         gap: 70px;
+
+        @media screen and (max-width: 850px) {
+            flex-direction: column;
+            gap: 20px;
+        }
     }
 
     &__informations button {
         border: none;
-        background-color: $red;
+        background-color: $primary-color;
         border-radius: 10px;
     }
 
@@ -62,7 +96,7 @@ $black: #0000;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        background-color: $red;
+        background-color: $primary-color;
         border-radius: 10px;
         padding: 10px;
     }
@@ -70,15 +104,23 @@ $black: #0000;
     &__informations img {
         width: 24px;
         height: auto;
+
+        @media screen and (max-width: 850px) {
+            width: 16px;
+        }
     }
 
     &__informations h2 {
         color: $white;
         font-size: 18px;
+
+        @media screen and (max-width: 850px) {
+            font-size: 13px;
+        }
     }
 
     &__text {
-        background-color: $gray;
+        background-color: $secondary-color;
         border-radius: 5px;
         font-size: 18px;
         padding: 15px 20px;
@@ -87,7 +129,11 @@ $black: #0000;
 
 .container__caroussel {
     width: 100%;
-    height: 415px
+    height: 415px;
+
+    @media screen and (max-width: 850px) {
+        height: 255px;
+    }
 }
 
 .title__tags {
@@ -96,6 +142,11 @@ $black: #0000;
     flex-direction: column;
     justify-content: space-between;
     gap: 15px;
+
+    @media screen and (max-width: 850px) {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
 
 .rating__host {
@@ -104,6 +155,13 @@ $black: #0000;
     flex-direction: column;
     align-items: flex-end;
     gap: 20px;
+
+    @media screen and (max-width: 850px) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
 }
 
 .rating {
@@ -119,7 +177,7 @@ $black: #0000;
 }
 
 .logement--tagsIndiv {
-    background-color: $red;
+    background-color: $primary-color;
     color: $white;
     font-size: 14px;
     padding: 5px 5px;
@@ -127,6 +185,12 @@ $black: #0000;
     width: 150px;
     height: fit-content;
     text-align: center;
+
+    @media screen and (max-width: 850px) {
+        font-size: 10px;
+        width: 84px;
+        border-radius: 5px;
+    }
 }
 
 .logement__description,
@@ -137,73 +201,4 @@ $black: #0000;
 .logement__equipements--list {
     list-style-type: none;
     padding-left: 0;
-}
-
-/* PARTIE RESPONSIVE MOBILE */
-
-@media screen and (max-width: 850px) {
-    .container__caroussel {
-        height: 255px;
-    }
-
-    .logement {
-        &__presentation {
-            flex-direction: column;
-        }
-
-        &__title {
-            gap: 10px;
-        }
-
-        &__title h2 {
-            font-size: 18px;
-        }
-
-        &__title h3 {
-            font-size: 14px;
-        }
-
-        &__host {
-            text-align: end;
-            font-size: 12px;
-            width: 100px;
-            gap: 10px;
-        }
-
-        &__host img {
-            width: 32px;
-            height: 32px;
-        }
-
-        &__informations {
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        &__informations h2 {
-            font-size: 13px;
-        }
-
-        &__informations img {
-            width: 16px;
-        }
-    }
-
-    .title__tags {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .logement--tagsIndiv {
-        font-size: 10px;
-        width: 84px;
-        border-radius: 5px;
-    }
-
-    .rating__host {
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 20px;
-    }
 }

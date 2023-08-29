@@ -1,24 +1,27 @@
+$primary-color: #FF6060;
+$secondary-color: #F6F6F6;
+$white: #FFFFFF;
+$black: #0000;
+
 .gallery__card {
     width: 18em;
     height: 18em;
     border-radius: 10px;
     display: flex;
     align-items: flex-end;
-    background-color: red;
+    background-color: $primary-color;
     text-decoration: none;
+
+    @media screen and (max-width: 850px) {
+        width: 100%;
+        height: 255px;
+    }
 }
 
 .gallery__card h3 {
-    color: #FFFFFF;
+    color: $white;
     font-size: 18px;
     margin-left: 20px;
     margin-bottom: 20px;
     width: 60%;
-}
-
-@media screen and (max-width: 850px) {
-    .gallery__card {
-        width: 100%;
-        height: 255px;
-    }
 }

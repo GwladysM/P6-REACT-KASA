@@ -1,3 +1,8 @@
+$primary-color: #FF6060;
+$secondary-color: #F6F6F6;
+$white: #FFFFFF;
+$black: #0000;
+
 .navbar {
     display: flex;
     flex-direction: row;
@@ -11,7 +16,7 @@
 }
 
 .non-active {
-    color: #FF6060;
+    color: $primary-color;
     text-decoration: none;
     margin-left: 57px;
 }
