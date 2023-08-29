@@ -9,7 +9,7 @@ import Host from '../../components/Host'
 import TitleLocation from '../../components/Title-Location'
 import Carrousel from '../../components/Carrousel'
 import Error from '../../components/Error'
-import { Loader } from "../../components/Loader";
+import Loader from '../../components/Loader'
 
 function Logement() {
     //Récupération de l'ID :
@@ -37,18 +37,17 @@ function Logement() {
     const logement = logementsData.find((logementsData) => logementsData.id === id)
 
     //Msg de chargement si données pas encore prêtes :
-    if (loading) {
+    if (setLoading === true) {
         return <Loader />
     }
-
     //Msg si le logement n'a pas été trouvé :
-    if (!logement) {
+    else if (!logement) {
         return <Error />
     }
 
     return (
         <div className="logement">
-            <div className='containerStyles'>
+            <div className='container__caroussel'>
                 <Carrousel slides={logement.pictures} />
             </div>
             <div className="logement__presentation">
@@ -71,7 +70,7 @@ function Logement() {
                 </div>
                 <div className="logement__equipements">
                     <Collapse label="Equipements">
-                        <ul className="logement__equipements__list">
+                        <ul className="logement__equipements--list">
                             {logement.equipments.map((equipment, index) => (
                                 <li key={index}>{equipment}</li>
                             ))}

@@ -1,7 +1,7 @@
 import React from "react";
 import AboutBanner from "../../components/AboutBanner";
 import Collapse from "../../components/Collapse";
-import './aboutbanner.scss'
+import './aboutpage.scss'
 
 function APropos() {
     return (
