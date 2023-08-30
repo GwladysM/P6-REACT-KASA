@@ -2,28 +2,43 @@ $primary-color: #FF6060;
 $secondary-color: #F6F6F6;
 $white: #FFFFFF;
 $black: #0000;
+$size: 3vh;
+$anim-dur: 500ms;
+$num-bar: 10;
+$anim-delay: $anim-dur / $num-bar;
 
-.progress {
-    height: 50px;
-    width: 50%;
-    border: 4px solid $primary-color;
-    padding: 5px;
+@keyframes bars {
+    0% {
+        transform: scale(0.5);
+    }
 
-    &__bar {
-        width: 100%;
-        height: 100%;
-        background-color: $primary-color;
-        transform-origin: 0% 50%;
-        transform: scaleX(0);
-        transition: transform 1000ms;
+    100% {
+        transform: scale(1);
     }
 }
 
-.gallery__card {
-    &:valid {
-        &+.progress {
-            &>.progress__bar {
-                transform: scale(1);
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary-color;
+}
+
+.load {
+    width: $size*10;
+    height: $size*2;
+    display: flex;
+    justify-content: space-evenly;
+
+    &__bar {
+        width: $size/2;
+        height: 100%;
+        background-color: $primary-color;
+        animation: bars $anim-dur backwards infinite alternate ease-in-out;
+
+        @for $i from 1 through $num-bar {
+            &--#{$i} {
+                animation-delay: $anim-delay*$i;
             }
         }
     }

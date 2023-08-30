@@ -22,22 +22,25 @@ function Logement() {
     //Appel à fetch pour récup des données du fichier json :
     useEffect(() => {
         setLoading(true)
-        fetch(`/logements.json`)
-            .then(res => res.json())
-            .then(data => {
-                setLogementsData(data);
-                setLoading(false);
-            })
-            .catch((error) => console.log(error),
-                setLoading(false)
-            )
+        const timeout = setTimeout(() => {
+            fetch(`/logements.json`)
+                .then(res => res.json())
+                .then(data => {
+                    setLogementsData(data);
+                    setLoading(false);
+                })
+                .catch((error) => console.log(error),
+                    setLoading(false)
+                )
+        }, 1000);
+        return () => clearTimeout(timeout);
     }, [id]);
 
     //Utilisation du find() pour cibler l'ID du logement sélectionné :
     const logement = logementsData.find((logementsData) => logementsData.id === id)
 
     //Msg de chargement si données pas encore prêtes :
-    if (setLoading === true) {
+    if (loading) {
         return <Loader />
     }
     //Msg si le logement n'a pas été trouvé :
