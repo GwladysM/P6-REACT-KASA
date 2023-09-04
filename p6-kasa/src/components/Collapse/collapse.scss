@@ -3,16 +3,6 @@ $secondary-color: #F6F6F6;
 $white: #FFFFFF;
 $black: #0000;
 
-@keyframes collapse {
-    from {
-        transform: scaleY(0);
-    }
-
-    to {
-        transform: scaleY(1);
-    }
-}
-
 .collapse {
     display: flex;
     flex-direction: column;
